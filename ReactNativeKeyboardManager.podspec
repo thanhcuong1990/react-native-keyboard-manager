@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
 	s.source         = { :git => repository, :tag => version }
 	s.platform       = :ios, "9.0"
 	s.preserve_paths = 'README.md', 'package.json', '*.js'
-	s.source_files   = 'ios/ReactNativeKeyboardManager/**/*.{h,m}'
+	s.source_files   = 'ios/ReactNativeKeyboardManager/*.{h,m}'
 
 	s.dependency 'React'
 	s.dependency 'React-RCTText'

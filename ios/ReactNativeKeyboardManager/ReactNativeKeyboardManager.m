@@ -92,11 +92,6 @@ RCT_EXPORT_METHOD(setToolbarPreviousNextButtonEnable: (BOOL) enabled) {
     }
 }
 
-RCT_EXPORT_METHOD(setPreventShowingBottomBlankSpace: (BOOL) enabled) {
-    if (debugging) RCTLogInfo(@"KeyboardManager.setPreventShowingBottomBlankSpace: %d", enabled);
-    [[IQKeyboardManager sharedManager] setPreventShowingBottomBlankSpace:enabled];
-}
-
 RCT_EXPORT_METHOD(setEnableAutoToolbar: (BOOL) enabled) {
     dispatch_sync(dispatch_get_main_queue(), ^{
         if (debugging) RCTLogInfo(@"KeyboardManager.setEnableAutoToolbar: %d", enabled);
@@ -113,16 +108,6 @@ RCT_EXPORT_METHOD(setShouldToolbarUsesTextFieldTintColor: (BOOL) enabled) {
 RCT_EXPORT_METHOD(shouldShowToolbarPlaceholder: (BOOL) enabled) {
     if (debugging) RCTLogInfo(@"KeyboardManager.shouldShowToolbarPlaceholder: %d", enabled);
     [IQKeyboardManager sharedManager].shouldShowToolbarPlaceholder = enabled;
-}
-
-RCT_EXPORT_METHOD(setShouldShowTextFieldPlaceholder: (BOOL) enabled) {
-    if (debugging) RCTLogInfo(@"KeyboardManager.setShouldShowTextFieldPlaceholder: %d", enabled);
-    [[IQKeyboardManager sharedManager] setShouldShowTextFieldPlaceholder:enabled];
-}
-
-RCT_EXPORT_METHOD(setShouldShowToolbarPlaceholder: (BOOL) enabled) {
-  if (debugging) RCTLogInfo(@"KeyboardManager.setShouldShowToolbarPlaceholder: %d", enabled);
-  [[IQKeyboardManager sharedManager] setShouldShowToolbarPlaceholder:enabled];
 }
 
 RCT_EXPORT_METHOD(setToolbarDoneBarButtonItemText: (NSString *) text) {

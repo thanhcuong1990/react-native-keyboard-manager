@@ -48,17 +48,17 @@ npm i -S react-native-keyboard-manager
 2. (Optional) If you want to use Next/Previous buttons, link the IQKeyboardManager resources to your Xcode project.
 
     1. Open your Xcode project
-    
+
     2. Got to folder **your-project/node_modules/react-native-keyboard-manager/ios/IQKeyboardManager/**
 
     3. Drag and drop the **Resources** folder to your project root. (If you already have **Resources** group, drag and drop the **IQKeyboardManager.bundle**)
-    
+
         <img src='https://raw.githubusercontent.com/douglasjunior/react-native-keyboard-manager/master/screenshots/drag-and-drop-01.png' width='480' />
         <br />
         <img src='https://raw.githubusercontent.com/douglasjunior/react-native-keyboard-manager/master/screenshots/drag-and-drop-02.png' width='240' />
-        
+
     4. In your `index.js`:
-    
+
         ```js
         if (Platform.OS === 'ios') {
             KeyboardManager.setToolbarPreviousNextButtonEnable(true);
@@ -71,7 +71,7 @@ npm i -S react-native-keyboard-manager
     ```bash
     pod 'ReactNativeKeyboardManager', :path => '../node_modules/react-native-keyboard-manager'
     ```
-    
+
 2. run
     ```bash
     pod install
@@ -91,14 +91,12 @@ if (Platform.OS === 'ios') {
     KeyboardManager.setEnable(true);
     KeyboardManager.setEnableDebugging(false);
     KeyboardManager.setKeyboardDistanceFromTextField(10);
-    KeyboardManager.setPreventShowingBottomBlankSpace(true);
     KeyboardManager.setEnableAutoToolbar(true);
     KeyboardManager.setToolbarDoneBarButtonItemText("Done");
     KeyboardManager.setToolbarManageBehaviour(0);
     KeyboardManager.setToolbarPreviousNextButtonEnable(false);
     KeyboardManager.setShouldToolbarUsesTextFieldTintColor(false);
-    KeyboardManager.setShouldShowTextFieldPlaceholder(true); // deprecated, use setShouldShowToolbarPlaceholder
-    KeyboardManager.setShouldShowToolbarPlaceholder(true);
+    KeyboardManager.shouldShowToolbarPlaceholder(true);
     KeyboardManager.setOverrideKeyboardAppearance(false);
     KeyboardManager.setShouldResignOnTouchOutside(true);
     KeyboardManager.resignFirstResponder();
